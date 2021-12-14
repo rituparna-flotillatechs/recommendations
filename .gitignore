@@ -26,6 +26,8 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+*.sqlite3
+.idea/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -127,3 +129,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Project asset folders
+media/
+
+# Database
+db.sqlite3
+
+# Editor directories and files
+.idea
