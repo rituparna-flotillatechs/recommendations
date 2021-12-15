@@ -3,12 +3,13 @@ import psycopg2
 from django.conf import settings
 from datetime import datetime
 from psycopg2 import OperationalError
+from recommendation_ML.settings import BASE_DIR
 
 class Recommendations:
     def __init__(self):
         
-        path_to_artifacts = "recommendation_ML/metadata_model/"
-
+        path_to_artifacts = str(BASE_DIR) + "/metadata_model/"
+        #print(BASE_DIR)
         filename1 = path_to_artifacts + "metadata_based_dump.sav"
         with open(filename1 , 'rb') as f1:
             self.model = pickle.load(f1)
