@@ -7,7 +7,7 @@ from psycopg2 import OperationalError
 class Recommendations:
     def __init__(self):
         
-        path_to_artifacts = "../../metadata_model/"
+        path_to_artifacts = "../metadata_model/"
 
         filename1 = path_to_artifacts + "metadata_based_dump.sav"
         with open(filename1 , 'rb') as f1:
