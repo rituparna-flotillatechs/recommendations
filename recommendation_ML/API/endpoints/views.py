@@ -97,8 +97,8 @@ class PredictView(views.APIView):
             if algorithm_status == "ab_testing":
                 alg_index = 0 if rand() < 0.5 else 1
             
-            algorithm_object = registry.endpoints[algs[alg_index].id]
-            #algorithm_object = Recommendations()
+            #algorithm_object = registry.endpoints[algs[alg_index].id]
+            algorithm_object = Recommendations()
             prediction = algorithm_object.predict_recommendations(request.data)
                     
             ml_request = MLRequest(
